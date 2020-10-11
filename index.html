@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+    <title>Switch Background color</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <button>switch color</button>
+    <script type="text/javascript">
+      var color = [
+        "#3A33FF",
+        "#33FF48",
+        "#33FFCC",
+        "#F6FF33",
+        "#FF33AB",
+        "#FC33FF",
+        "#33FFE5",
+        "#FF33BE",
+        "#FFFB33",
+        "#FF333C",
+        "#68FF33",
+        "#3360FF",
+        "#EE0513",
+      ];
+      var i = 0;
+      document.querySelector("button").addEventListener("click", function () {
+        i = 1 < color.length ? ++i : 0;
+        document.querySelector("body").style.background = color[i];
+        if (i == color.length) i = 1;
+      });
+    </script>
+  </body>
+</html>
